@@ -560,7 +560,7 @@ Options:}
       if @options[:debug] || @options[:in_batches]
         tables.each(&block)
       else
-        Parallel.each(tables, &block)
+        Parallel.each(tables, in_processes: @options[:concurrency], &block)
       end
     end
 

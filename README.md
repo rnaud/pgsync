@@ -118,6 +118,13 @@ And run:
 pgsync product:123
 ```
 
+By default groups will run in parallel using the number of available cores.
+You can override the concurrency with an option:
+
+```yml
+concurrency: 8
+```
+
 ### Schema
 
 Sync schema
